@@ -1,5 +1,24 @@
 <html>
   <body>
   <h1>Hello world</h1><script src="./repair.js"></script>
+    <script>
+      window.callback = function(){
+        console.log("call web service to create a repair request item");
+        window.postMessage("");
+      }
+
+      window.backToHome = function(){
+        console.log("Going back to Homepage");
+        window.postMessage("HomePage");
+      }
+    </script>
+    <script defer src="{endpointURL?id=value&hasvalue=value}" type="module"></script>
+    
+    <rof-application>
+      <noscript>
+      <div role="alert">Please enable JavaScript to use repair enquiry form.</div>
+      </noscript>
+    </rof-application>
+    <button onclick="window.backToHome()">Back to Home</button>
   </body>
 </html>
